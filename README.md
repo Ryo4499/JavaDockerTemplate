@@ -1,8 +1,7 @@
 # JavaDockerTemplate
 
 This is a Java Docker Template.  
-The java user in the container is bound on uid and gid of a local machine user.  
-It's to specified in `.env` file.  
+The container is bind on specified a local machine user by `.env` file.  
 Also, this directory bind to volumes.  
 
 Base Images:
@@ -12,10 +11,13 @@ Base Images:
 ## How to use
 
 ```sh
+git clone $REPO_URL
+cd JavaDockerTemplate
 cp .env.sample .env
 # Specify your environments
 vi .env
-docker-compose build
-docker-compose up -d
-docker-compose down
+docker compose build
+docker compose up -d
+docker compose exec app sh
+docker compose down
 ```
