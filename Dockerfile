@@ -7,7 +7,7 @@ ARG HOST_GROUP='user'
 ARG TZ='Etc/UTC'
 
 ENV TZ $TZ
-ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk
+ENV JAVA_HOME /usr/lib/jvm/java-17-openjdk
 
 RUN apk update && \
     apk add shadow tree tzdata git vim curl wget zsh && \
